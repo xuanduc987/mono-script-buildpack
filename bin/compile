@@ -41,7 +41,7 @@ echo "-----> Setting envvars"
 export PATH="/app/mono/bin:$PATH"
 export LD_LIBRARY_PATH="/app/mono/lib:$LD_LIBRARY_PATH"
 echo "-----> Importing trusted root certificates"
-mono $MOZROOT --sync --import
+cert-sync /etc/ssl/certs/ca-certificates.crt
 cp -r ~/.config ${BUILD_DIR}/.
 cd ${BUILD_DIR}
 
