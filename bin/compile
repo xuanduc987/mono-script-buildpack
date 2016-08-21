@@ -42,7 +42,7 @@ export PATH="/app/mono/bin:$PATH"
 export LD_LIBRARY_PATH="/app/mono/lib:$LD_LIBRARY_PATH"
 echo "-----> Importing trusted root certificates"
 cert-sync /etc/ssl/certs/ca-certificates.crt
-cp -r ~/.config ${BUILD_DIR}/.
+#cp -r ~/.config ${BUILD_DIR}/.
 cd ${BUILD_DIR}
 
 if [ -f paket.lock ]; then
