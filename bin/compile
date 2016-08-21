@@ -49,10 +49,10 @@ cd ${BUILD_DIR}
 
 if [ -f paket.lock ]; then
   echo "-----> paket.lock found, restoring packages with paket"
-  mono /app/mono/bin/paket.exe restore
+  mono /app/mono/bin/paket.exe -v restore
 elif [ -f paket.dependencies ]; then
   echo "-----> paket.dependencies found, installing packages with paket"
-  mono /app/mono/bin/paket.exe install
+  mono /app/mono/bin/paket.exe -v install
 fi
 
 if [ -f packages.config -o -f */packages.config ]; then
