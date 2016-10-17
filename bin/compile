@@ -66,6 +66,9 @@ if [ -f app.fsx ]; then
 elif [ -f *.sln ]; then
    echo "-----> Compiling application"
    mono $XBUILD
+elif [ -f $1/build.fsx ]; then
+   echo "-----> Compiling fake project"
+   mono packages/FAKE/tools/FAKE.exe --fsiargs -d:MONO build.fsx
 fi
 
 mkdir -p ${BUILD_DIR}/.profile.d
