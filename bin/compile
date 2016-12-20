@@ -9,7 +9,7 @@ LP_DIR=`cd $(dirname $0); cd ..; pwd`
 set -e
 
 MONO3_VM_BINARY="https://github.com/SuaveIO/mono-builder/releases/download/0.0.9/mono-4.4.2.11.tar.gz"
-NUGET_BINARY="https://nuget.org/nuget.exe"
+NUGET_BINARY="https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 PAKET_BINARY="https://github.com/fsprojects/Paket/releases/download/3.13.3/paket.exe"
 
 NUGET="${BUILD_DIR}/vendor/mono/bin/nuget.exe"
