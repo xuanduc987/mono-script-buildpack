@@ -72,7 +72,7 @@ if [ -f app.fsx ]; then
   mono /app/mono/lib/mono/4.5/fsc.exe app.fsx
 elif [ -f *.sln ]; then
    echo "-----> Compiling application"
-   mono $XBUILD
+   mono $XBUILD /p:Configuration=Release
 elif [ -f $1/build.fsx ]; then
    echo "-----> Compiling fake project"
    mono packages/FAKE/tools/FAKE.exe --fsiargs -d:MONO build.fsx
