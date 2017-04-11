@@ -44,6 +44,12 @@ export LD_LIBRARY_PATH="/app/mono/lib:$LD_LIBRARY_PATH"
 echo "-----> Importing trusted root certificates"
 cert-sync --quiet --user /etc/ssl/certs/ca-certificates.crt
 
+echo "-----> Setting NuGetCachePath --> ${CACHE_DIR}/$STACK/nuget/cache"
+if [ ! -d ${CACHE_DIR}/$STACK/nuget/cache ]; then
+    mkdir -p ${CACHE_DIR}/$STACK/nuget/cache
+fi
+export NuGetCachePath="${CACHE_DIR}/$STACK/nuget/cache"
+
 # cp -r ~/.config ${BUILD_DIR}/.
 
 cd ${BUILD_DIR}
