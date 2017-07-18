@@ -10,7 +10,7 @@ set -e
 
 MONO3_VM_BINARY="https://github.com/SuaveIO/mono-builder/releases/download/0.0.9/mono-4.4.2.11.tar.gz"
 NUGET_BINARY="https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
-PAKET_BINARY="https://github.com/fsprojects/Paket/releases/download/4.3.0/paket.exe"
+PAKET_BINARY="https://github.com/fsprojects/Paket/releases/download/5.78.4/paket.exe"
 
 NUGET="${BUILD_DIR}/vendor/mono/bin/nuget.exe"
 MOZROOT="${BUILD_DIR}/vendor/mono/lib/mono/4.5/mozroots.exe"
