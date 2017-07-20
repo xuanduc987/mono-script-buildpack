@@ -38,6 +38,10 @@ ln -s "${BUILD_DIR}/vendor/mono" /app
 cp -p /app/mono/bin/fsharpc /app/mono/bin/fsharpc-heroku
 cp -p /app/mono/bin/fsharpi /app/mono/bin/fsharpi-heroku
 
+# Certs sync
+/app/mono/bin/mozroots --import --sync
+/app/mono/bin/cert-sync --user /etc/ssl/certs/ca-certificates.crt
+
 echo "-----> Setting envvars"
 export PATH="/app/mono/bin:$PATH"
 export LD_LIBRARY_PATH="/app/mono/lib:$LD_LIBRARY_PATH"
